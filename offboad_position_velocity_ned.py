@@ -8,7 +8,7 @@ from mavsdk.offboard import (PositionNedYaw, VelocityNedYaw, OffboardError)
 
 async def run():
     drone = System()
-    await drone.connect(system_address="s//derial:ev/ttyACM0:57600")
+    await drone.connect(system_address="serial:///dev/ttyACM0:57600")
 
     print("Waiting for drone to connect...")
     async for state in drone.core.connection_state():
